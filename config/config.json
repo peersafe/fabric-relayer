@@ -1,27 +1,27 @@
 {
   "PolyConfig": {
-    "RestURL": "http://106.75.226.11:40336",
-    "EntranceContractAddress": "0300000000000000000000000000000000000000",
-    "WalletFile": "./wallet/wallet.dat",
-    "WalletPwd": "4cUYqGj2yib718E7ZmGQc"
+    "RestURL": "http://127.0.0.1:21336",
+    "EntranceContractAddress": "0400000000000000000000000000000000000000",
+    "WalletFile": "../poly/build/wallet/wallet2.dat",
+    "WalletPwd": "123"
   },
   "FabricConfig": {
     "SideChainId": 7,
-    "BlockConfig": 1,
+    "BlockConfig":1,
     "Channel":"mychannel",
     "Chaincode": "ccm",
     "SdkConfFile": "config/config_e2e.yaml",
     "UserName": "Admin",
-    "OrgName": "Org1",
+    "OrgName": "org1",
     "TrustChainFiles": [
       [
-        "/data/gopath/src/github.com/polynetwork/fabric-relayer/root-cert.pem",
-        "/data/gopath/src/github.com/polynetwork/fabric-relayer/user1-cert.pem"
+        "/Volumes/data/project/golang/blockchain/hyperledger/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem",
+        "/Volumes/data/project/golang/blockchain/hyperledger/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
       ]
     ],
     "PrivateKeyFiles": [
-      "/data/gopath/src/github.com/polynetwork/fabric-relayer/user1_sk"
+      "/Volumes/data/project/golang/blockchain/hyperledger/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/priv_sk"
     ]
   },
-  "BoltDbPath": "./boltdb"
+  "BoltDbPath": "./build/boltdb"
 }

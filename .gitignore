@@ -8,10 +8,10 @@ Log
 UTC--*
 config-main.json
 config-debug-dev.json
-build/bin
-build/wallet
+build
 main
 nohup.out
 *._test.go
 ordererOrganizations/
 peerOrganizations/
+.DS_Store

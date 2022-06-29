@@ -1,11 +1,9 @@
-FROM golang:1.15 AS build
-WORKDIR /app
-RUN git clone https://github.com/polynetwork/eth-relayer.git  && \
-    cd eth-relayer && \
-    go build -o run_eth_relayer main.go
+FROM golang:1.18.3 AS build
+COPY . /src
+WORKDIR /src
+RUN GOPROXY=https://goproxy.cn make
 
-FROM ubuntu:18.04
+FROM ubuntu:latest
 WORKDIR /app
-COPY ./config.json config.json
-COPY --from=build /app/eth-relayer/run_eth_relayer run_eth_relayer
+COPY --from=build /src/build/bin/relayer /usr/local/bin/relayer
 CMD ["/bin/bash"]

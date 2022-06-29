@@ -29,7 +29,7 @@ client:
 
   # Root of the MSP directories with keys and certs.
   cryptoconfig:
-    path: ${FABRIC_RELAYER_PATH}
+    path: /Volumes/data/project/golang/blockchain/hyperledger/fabric-samples/test-network/organizations
 
   # Some SDKs support pluggable KV stores, the properties under "credentialStore"
   # are implementation specific
@@ -61,9 +61,9 @@ client:
     # [Optional]. Client key and cert for TLS handshake with peers and orderers
     client:
       key:
-        path: ${FABRIC_RELAYER_PATH}/peerOrganizations/org1.example.com/users/User1@org1.example.com/tls/client.key
+        path: /Volumes/data/project/golang/blockchain/hyperledger/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/tls/client.key
       cert:
-        path: ${FABRIC_RELAYER_PATH}/peerOrganizations/org1.example.com/users/User1@org1.example.com/tls/client.crt
+        path: /Volumes/data/project/golang/blockchain/hyperledger/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/tls/client.crt
 
 #
 # [Optional]. But most apps would have this section so that channel objects can be constructed
@@ -221,7 +221,7 @@ organizations:
     peers:
       - peer0.org1.example.com
 
-    cryptoPath:  peerOrganizations/org1.example.com/users/{username}@org1.example.com/msp
+    cryptoPath:  peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
 
 #
 # List of orderers to send transaction and channel create/update requests to. For the time
@@ -250,7 +250,7 @@ orderers:
 
     tlsCACerts:
       # Certificate location absolute path
-      path: ${FABRIC_RELAYER_PATH}/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem
+      path: /Volumes/data/project/golang/blockchain/hyperledger/fabric-samples/test-network/organizations/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem
 #
 # List of peers to send various requests to, including endorsement, query
 # and event listener registration.
@@ -275,7 +275,7 @@ peers:
 
     tlsCACerts:
       # Certificate location absolute path
-      path: ${FABRIC_RELAYER_PATH}/peerOrganizations/org1.example.com/tlsca/tlsca.org1.example.com-cert.pem
+      path: /Volumes/data/project/golang/blockchain/hyperledger/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/tlsca/tlsca.org1.example.com-cert.pem
 
   peer0.org2.example.com:
     # this URL is used to send endorsement and query requests
@@ -296,4 +296,4 @@ peers:
 
     tlsCACerts:
       # Certificate location absolute path
-      path: ${FABRIC_RELAYER_PATH}/peerOrganizations/org2.example.com/tlsca/tlsca.org2.example.com-cert.pem
+      path: /Volumes/data/project/golang/blockchain/hyperledger/fabric-samples/test-network/organizations/peerOrganizations/org2.example.com/tlsca/tlsca.org2.example.com-cert.pem
